@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4e8 100%);
+        min-height: 100vh;
+        scroll-behavior: smooth;
+      }
+
+      .flowers-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .flower {
+        position: absolute;
+        font-size: 40px;
+        animation: float 8s ease-in-out infinite;
+        opacity: 0;
+      }
+
+      .flower:nth-child(1) { left: 10%; animation-delay: 0s; }
+      .flower:nth-child(2) { left: 20%; animation-delay: 1s; font-size: 35px; }
+      .flower:nth-child(3) { left: 30%; animation-delay: 2s; font-size: 45px; }
+      .flower:nth-child(4) { left: 40%; animation-delay: 0.5s; }
+      .flower:nth-child(5) { left: 50%; animation-delay: 1.5s; font-size: 38px; }
+      .flower:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+      .flower:nth-child(7) { left: 70%; animation-delay: 1.2s; font-size: 42px; }
+      .flower:nth-child(8) { left: 80%; animation-delay: 0.8s; }
+      .flower:nth-child(9) { left: 90%; animation-delay: 2.2s; font-size: 36px; }
+
+      @keyframes float {
+        0% {
+          transform: translateY(-100px) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .hearts-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .heart {
+        position: absolute;
+        color: #ff69b4;
+        font-size: 24px;
+        animation: floatHeart 6s ease-in-out infinite;
+        opacity: 0;
+      }
+
+      .heart:nth-child(1) { left: 15%; animation-delay: 0.3s; }
+      .heart:nth-child(2) { left: 35%; animation-delay: 1.3s; font-size: 20px; }
+      .heart:nth-child(3) { left: 55%; animation-delay: 2.3s; font-size: 28px; }
+      .heart:nth-child(4) { left: 75%; animation-delay: 0.8s; }
+      .heart:nth-child(5) { left: 85%; animation-delay: 1.8s; font-size: 22px; }
+
+      @keyframes floatHeart {
+        0% {
+          transform: translateY(100vh) scale(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-100px) scale(1.2);
+          opacity: 0;
+        }
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.3), transparent 70%);
+        animation: pulseGlow 4s ease-in-out infinite;
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+
+      .content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        max-width: 900px;
+      }
+
+      .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #d63384;
+        margin-bottom: 24px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .subtitle {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        color: #e91e63;
+        margin-bottom: 32px;
+        animation: fadeInDown 1s ease-out 0.3s backwards;
+      }
+
+      .message {
+        font-size: 1.25rem;
+        color: #6d3a5a;
+        line-height: 1.8;
+        margin-bottom: 48px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeInUp 1s ease-out 0.6s backwards;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease-out 0.9s backwards;
+      }
+
+      .nav-button {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+      }
+
+      .nav-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .nav-button:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .nav-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn-wishes {
+        background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+        box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
+      }
+
+      .btn-wishes:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(255, 107, 157, 0.6);
+      }
+
+      .btn-gallery {
+        background: linear-gradient(135deg, #ffa8b5 0%, #ff6b9d 100%);
+        box-shadow: 0 8px 20px rgba(255, 168, 181, 0.4);
+      }
+
+      .btn-gallery:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(255, 168, 181, 0.6);
+      }
+
+      .btn-appreciation {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        box-shadow: 0 8px 20px rgba(240, 147, 251, 0.4);
+      }
+
+      .btn-appreciation:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(240, 147, 251, 0.6);
+      }
+
+      .section {
+        min-height: 100vh;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #d63384;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .wishes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .wish-card {
+        background: white;
+        padding: 32px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .wish-card::before {
+        content: '💐';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 60px;
+        opacity: 0.1;
+        transform: rotate(20deg);
+      }
+
+      .wish-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .wish-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .wish-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #d63384;
+        margin-bottom: 12px;
+      }
+
+      .wish-text {
+        font-size: 1rem;
+        color: #6d3a5a;
+        line-height: 1.6;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .gallery-item {
+        aspect-ratio: 1;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      .appreciation-content {
+        max-width: 800px;
+        background: white;
+        padding: 48px;
+        border-radius: 24px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .appreciation-text {
+        font-size: 1.2rem;
+        color: #6d3a5a;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .back-button {
+        margin-top: 40px;
+        padding: 12px 32px;
+        font-size: 1rem;
+        font-weight: 600;
+        background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 15px rgba(255, 107, 157, 0.3);
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .back-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(255, 107, 157, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 2rem;
+        }
+
+        .message {
+          font-size: 1.1rem;
+        }
+
+        .nav-buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .nav-button {
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .appreciation-content {
+          padding: 32px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flowers-container">
+      <div class="flower">🌺</div>
+      <div class="flower">🌺</div>
+      <div class="flower">🌷</div>
+      <div class="flower">🌹</div>
+      <div class="flower">💐</div>
+      <div class="flower">🌸</div>
+      <div class="flower">🌺</div>
+      <div class="flower">🌷</div>
+      <div class="flower">🌹</div>
+    </div>
+
+    <div class="hearts-container">
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+    </div>
+
+    <section class="hero" id="home">
+      <div class="content">
+        <h1 class="title">Chúc Mừng Sinh Nhật Amh Tôm</table></h1>
+        <h2 class="subtitle">01 - 01</h2>
+        <p class="message">
+          Dân Đẹp Trai gửi đến anh Tôm sức khỏe tràn ngập nổ hũ thắng lớn.
+        </p>
+        <div class="nav-buttons">
+          <a href="#wishes" class="nav-button btn-wishes">
+            <span>Lời Chúc</span>
+          </a>
+          <a href="#gallery" class="nav-button btn-gallery">
+            <span>Thư Viện</span>
+          </a>
+          <a href="#appreciation" class="nav-button btn-appreciation">
+            <span>Tình Cảm</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="wishes">
+      <h2 class="section-title">Những Lời Chúc Tốt Đẹp</h2>
+      <div class="wishes-grid">
+        <div class="wish-card">
+          <div class="wish-icon">🌸</div>
+          <h3 class="wish-title">Hạnh Phúc</h3>
+          <p class="wish-text">Nổ lớn nhớ bao ae tiệc.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">💪</div>
+          <h3 class="wish-title">Thành Công</h3>
+          <p class="wish-text">Phát triển con đường vua cờ bạc.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🌟</div>
+          <h3 class="wish-title">Tỏa Sáng</h3>
+          <p class="wish-text">Luôn tự tin 100K lên 2 triệu.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">❤️</div>
+          <h3 class="wish-title">Yêu Thương</h3>
+          <p class="wish-text">Luôn được ae bơm vốn làm việc lớn.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🌈</div>
+          <h3 class="wish-title">Sức Khỏe</h3>
+          <p class="wish-text">Luôn dồi dào sức khỏe, tràn đầy năng lượng của vua cờ bạc.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🎉</div>
+          <h3 class="wish-title">Niềm Vui</h3>
+          <p class="wish-text">Mỗi ngày là một niềm vui trong sự lo âu.</p>
+        </div>
+      </div>
+      <a href="#home" class="back-button">Quay Lại</a>
+    </section>
+
+    <section class="section" id="gallery">
+      <h2 class="section-title">Thư Viện Hoa</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">🌸</div>
+        <div class="gallery-item">🌺</div>
+        <div class="gallery-item">🌷</div>
+        <div class="gallery-item">🌹</div>
+        <div class="gallery-item">💐</div>
+        <div class="gallery-item">🌻</div>
+        <div class="gallery-item">🌼</div>
+        <div class="gallery-item">🏵️</div>
+        <div class="gallery-item">💮</div>
+        <div class="gallery-item">🎀</div>
+        <div class="gallery-item">💝</div>
+        <div class="gallery-item">💖</div>
+      </div>
+      <a href="#home" class="back-button">Quay Lại</a>
+    </section>
+
+    <section class="section" id="appreciation">
+      <h2 class="section-title">Lời Chúc Từ Dân Đẹp Trai</h2>
+      <div class="appreciation-content">
+        <p class="appreciation-text">
+          Tôi DÂN ĐẸP TRAI gửi đến Anh Tôm Vua Cờ Bạc anh là một người anh sống chất một người anh sống đẹp.
+        </p>
+        <p class="appreciation-text">
+          Hãy sống hết mình vì lòng kiêu hãnh trùm bài số một.
+        </p>
+        <p class="appreciation-text">
+          Nhân dịp này mong anh thành công để các đàn em của anh có một kỉ niệm đáng sống nhất.
+        </p>
+        <p class="appreciation-text" style="text-align: center; font-weight: 600; color: #d63384; font-size: 1.3rem; margin-top: 32px;">
+          🌹 Chúc Mừng Sinh Nhật Anh Trai Tôm Đầu Ú🌹
+        </p>
+      </div>
+      <a href="#home" class="back-button">Quay Lại</a>
+    </section>
+  </body>
+</html>
